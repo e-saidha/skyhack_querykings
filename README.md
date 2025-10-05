@@ -1,90 +1,57 @@
-README — Flight Difficulty Score
+Flight Difficulty Score at ORD
 
-Project Overview
-
-Frontline teams at United Airlines face unequal challenges in turning around flights at Chicago O’Hare (ORD).
-Some flights are harder due to short ground time, transfer baggage, or special passenger needs.
-
-This project builds a **Flight Difficulty Score (FDS)** to **quantify flight complexity daily**, replacing ad-hoc manual judgment with a scalable, data-driven framework.
-
-
-
-Objectives
-
-1. **Exploratory Data Analysis (EDA)**
-
-   * Understand delay patterns, ground-time constraints, passenger loads, baggage handling, and service requests.
-   * Provide clear visualizations of operational bottlenecks.
-
-2. **Flight Difficulty Score Development**
-
-   * Use Machine Learning (Logistic Regression & Random Forest) to model drivers of flight complexity.
-   * Create **daily ranks** and classify flights as **Easy, Medium, Difficult**.
-   * Generate `test_<teamname>.csv` with flight details, features, and final score.
-
-3. **Post-Analysis & Operational Insights**
-
-   * Identify destinations and operational factors consistently linked with high difficulty.
-   * Deliver practical “what-if” scenarios and quantify **economic impact** of interventions.
-
-
+This repository contains all code, images, and outputs for the Flight Difficulty Score project developed during the United Airlines Hackathon. The workflow is organized into Google Colab notebooks, with supporting folders for visuals and final deliverables.
 
 Repository Structure
-
-```
-├── data/                         # (Local only, not uploaded to GitHub)
+├── data/                               # Local only (not uploaded)
 │   ├── Flight Level Data.csv
 │   ├── PNR Flight Level Data.csv
 │   ├── PNR Remark Level Data.csv
 │   ├── Bag Level Data.csv
 │   └── Airports Data.csv
 │
-├── notebooks/
-│   ├── 1_EDA.ipynb               # Exploratory Data Analysis
-│   ├── 2_FlightDifficulty.ipynb  # ML modeling & difficulty scoring
-│   └── 3_Insights.ipynb          # Post-analysis, what-if, economic impact
+├── notebooks/                          # Main workflow (Google Colab)
+│   ├── 1_Understanding_Data.ipynb
+│   ├── 2_Deliverable_1_Exploratory_Data_Analysis_(EDA).ipynb
+│   ├── 3_Deliverable_2_Flight_Difficulty_Score_Development.ipynb
+│   └── 4_Deliverable_3_Post-Analysis_&_Operational_Insights.ipynb
 │
-├── figures/                      # Saved plots for report & slides
-│
-├── test_querykings.csv           # ✅ Required submission file
-│
-├── README.md                     # This document
-└── requirements.txt              # Python dependencies
-```
+├── images/                             # Labelled graphs & visuals for report
+├── test_querykings.csv                 # Final submission file
+├── report.pdf / presentation.pptx      # Final report
+├── requirements.txt                    # Python dependencies
+└── README.md                           
+
+How to Run
+
+Open notebooks in Google Colab.
+
+Upload the five datasets into /content/.
+
+Execute the notebooks as per requirement:
+
+1_Understanding_Data.ipynb → data preview and checks
+
+2_Deliverable_1_Exploratory_Data_Analysis_(EDA).ipynb → visual EDA and operational risks
+
+3_Deliverable_2_Flight_Difficulty_Score_Development.ipynb → machine learning models, difficulty scoring, generates test_querykings.csv
+
+4_Deliverable_3_Post-Analysis_&_Operational_Insights.ipynb → what-if scenarios and economic impact
+
+Outputs
+
+test_querykings.csv → per-flight difficulty scores, ranks, classifications
+
+images → labelled visuals used in the report and slides
+
+report → methodology, results, and business insights
 
 Tech Stack
 
-* **Python** (pandas, numpy, matplotlib, seaborn, scikit-learn)
-* **SQL via DuckDB** for feature engineering & dataset joins
-* **Google Colab** as execution environment
+Python: pandas, numpy, scikit-learn, matplotlib, seaborn
 
-## Deliverables
+SQL: DuckDB for database handling
 
-* **Report (PPT/PDF)**: Visual storytelling of methodology, EDA, modeling, and insights.
-* **Difficulty Score File**: `test_querykings.csv` with per-flight scoring.
-* **Code**: Clean notebooks with step-by-step process (EDA → ML → Insights).
-* **Figures**: High-quality charts for replication.
+Google Colab: execution environment
 
----
-
-## How to Run
-
-1. Open notebooks in **Google Colab**.
-2. Upload the 5 provided datasets to `/content/`.
-3. Run in sequence:
-
-   * `1_EDA.ipynb` → exploratory visuals & checks
-   * `2_FlightDifficulty.ipynb` → builds ML models, outputs `test_querykings.csv`
-   * `3_Insights.ipynb` → post-analysis, what-if, economic impact
-4. Final artifacts will be saved in the workspace.
-
----
-
-## Conclusion
-
-This project demonstrates how **data-driven flight difficulty scoring** can replace subjective judgment with a repeatable framework.
-By combining **SQL feature engineering, ML modeling, and operational what-if analysis**, we provide both **predictive power** and **business-ready insights**.
-The framework equips frontline teams with actionable intelligence to **allocate staff, pre-empt risks, and cut costs**, ultimately enhancing **on-time performance and customer satisfaction**.
-
-
-*Built with passion during the United Airlines Hackathon by Team QueryKings* 
+Built during the United Airlines Hackathon by Team QueryKings 
