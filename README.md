@@ -167,11 +167,6 @@ This project was developed during the United Airlines Hackathon as a solution to
 
 ---
 
-## 📄 License
-
-This project was created for the United Airlines Hackathon. All rights reserved by Team QueryKings and United Airlines.
-
----
 
 ## 🤝 Acknowledgments
 
