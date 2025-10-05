@@ -76,12 +76,6 @@ The Flight Difficulty Score system evaluates multiple operational factors—pass
    | `3_Deliverable_2_Scoring` | Model training, difficulty score calculation | `test_querykings.csv` |
    | `4_Deliverable_3_Insights` | What-if analysis, economic modeling | Business recommendations |
 
-4. **View Results**
-   - Difficulty scores: `test_querykings.csv`
-   - Visualizations: `images/` folder
-   - Full analysis: `report.pdf`
-
----
 
 ## 📊 Methodology
 
@@ -169,7 +163,7 @@ plotly>=5.14.0
 This project was developed during the United Airlines Hackathon as a solution to optimize flight operations through data-driven difficulty scoring.
 
 **Contributors:**
-- [Add team member names and roles]
+- [Ekom and Rayan]
 
 ---
 
@@ -187,13 +181,6 @@ This project was created for the United Airlines Hackathon. All rights reserved 
 
 ---
 
-## 📞 Contact
-
-For questions about the project or dataset access:
-- **Team Email**: [your-email@domain.com]
-- **GitHub Issues**: [Link to issues page]
-
----
 
 <div align="center">
 
