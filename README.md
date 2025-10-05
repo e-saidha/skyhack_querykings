@@ -62,12 +62,10 @@ The Flight Difficulty Score system evaluates multiple operational factors—pass
 
 2. **Upload Data**
    ```python
-   # In Colab, run this in the first cell:
-   from google.colab import files
-   uploaded = files.upload()  # Upload all 5 CSV files
+   # download the 5 datasets locally in /content 
    ```
 
-3. **Run Notebooks Sequentially**
+3. **Run Notebooks as you see fit, mastertable is created for each file**
 
    | Notebook | Purpose | Output |
    |----------|---------|--------|
@@ -77,21 +75,6 @@ The Flight Difficulty Score system evaluates multiple operational factors—pass
    | `4_Deliverable_3_Insights` | What-if analysis, economic modeling | Business recommendations |
 
 
-## 📊 Methodology
-
-### Data Sources
-- **Flight Operations**: Scheduled vs. actual times, delays, cancellations
-- **Passenger Records**: Connection times, special services, booking patterns
-- **Baggage Data**: Transfer complexity, mishandling risk
-- **Airport Metadata**: Gate constraints, weather conditions
-
-### Difficulty Score Components
-1. **Connection Complexity** (30%): Tight connections, international transfers
-2. **Baggage Risk** (25%): Transfer volumes, historical mishandling
-3. **Schedule Pressure** (20%): Turn times, slot constraints
-4. **Passenger Services** (15%): Special assistance, group bookings
-5. **External Factors** (10%): Weather, ATC delays
-
 ### Machine Learning Pipeline
 ```
 Data Ingestion → Feature Engineering → Model Training → Score Generation → Validation
@@ -99,23 +82,7 @@ Data Ingestion → Feature Engineering → Model Training → Score Generation �
   DuckDB SQL      Aggregations      Random Forest      0-100 Scale    Business Rules
 ```
 
----
 
-## 📈 Key Outputs
-
-### `test_querykings.csv` Schema
-```csv
-flight_id, difficulty_score, difficulty_rank, risk_classification, top_risk_factors
-UA1234, 87.3, High, Critical, "tight_connections|baggage_volume|weather"
-```
-
-### Visualization Examples
-- Difficulty distribution by time of day
-- Risk factor correlation heatmaps
-- Economic impact projections
-- Gate utilization optimization
-
----
 
 ## 🛠️ Tech Stack
 
@@ -174,7 +141,6 @@ This project was developed during the United Airlines Hackathon as a solution to
 - Google Colab for computational resources
 - Open-source community for ML tools and libraries
 
----
 
 
 <div align="center">
